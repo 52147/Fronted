@@ -1,7 +1,7 @@
 # Ajax
 ## Ajax
-- Ajax is "Asynchronous Javascript And XML"
-- Ajax allow web change content dynamically without reloading the page.
+- Ajax stands for "Asynchronous Javascript And XML".
+- Ajax allows web change content dynamically without reloading the page.
 
 
 ## 1. Ajax Basic
@@ -36,7 +36,7 @@
 
 </html>
 ```
-Json will appear slower because Ajax is asynchronous.
+Json will appear slower that h1 element because Ajax is asynchronous.
 ![image](https://user-images.githubusercontent.com/79159894/203877196-2196c557-6c61-49cf-8e31-a8a80fe5ede2.png)
 
 ## 2. Use get to sned parameter
@@ -183,10 +183,10 @@ def test():
 if __name__ == "__main__":
     app.run(debug=True)  # debug = True to let error display on webpage
 ```
-- Right click, select run python in terminal
+- Right click, select `run python in terminal`
 ![image](https://user-images.githubusercontent.com/79159894/203896532-0131f0ca-d03c-4e77-b74c-89fa0554611e.png)
 
-- Go to http://127.0.0.1:5000/
+- Go to `http://127.0.0.1:5000/`
 - We can see `ajax_03.html` running on it.
 
 ![image](https://user-images.githubusercontent.com/79159894/203896662-51471ec4-b801-4ca7-ab58-413c6c70a644.png)
