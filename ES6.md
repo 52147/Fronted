@@ -69,5 +69,16 @@
         }
         new Foo() instanceof Foo
         // return false because constructor return a new object
-   ```           
+   ```
+   
+ ## 7. use new keyword to initialize the class
+   
+```javascript   
+        // use new keyword to initialize the class
+        class Point4 {}
+
+        var point = Point4(2, 3); // return error
+
+        var point = new Point(2, 3); // correct
+```       
 https://es6.ruanyifeng.com/#docs/class
