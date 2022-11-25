@@ -17,7 +17,20 @@ https://javascript.ruanyifeng.com/oop/basic.html
 
 
 ## asynchronous development in js
-- FS operation
+- FS File operation
+```javascript
+require('fs').readFile(',/index.html', (err, data) => {})
+// (err, data) => {} is call back function
+```
+
 - Database operation
+```javascript
+$.get('/server', (data) =>{})
+// (data) =>{} is callback function
+```
 - AJAX
 - setTimeout
+```javascript
+setTimeout(()=>{}, 2000);
+// ()=>{} is callback function
+```
