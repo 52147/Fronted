@@ -16,8 +16,23 @@
 https://javascript.ruanyifeng.com/oop/basic.html
 
 
-## asynchronous programming
+## asynchronous programming(use callback function)
 - using callback function to fullfill asynchronous programming
+- Distadvantage: 
+- One async function has one callback function and in callback function has another async function...
+```javascript
+
+        // too many callback functions
+        asyncFunc1(opt, () => {
+            asyncFunc2(opt, () => {
+                asyncFunc3(opt, () => {
+                    asyncFunc4(opt, () => {
+                        // somer operation
+                    })
+                })
+            })
+        });
+```
 - FS File operation
 ```javascript
 require('fs').readFile(',/index.html', (err, data) => {})
@@ -35,3 +50,7 @@ $.get('/server', (data) =>{})
 setTimeout(()=>{}, 2000);
 // ()=>{} is callback function
 ```
+
+
+## Promise can prevent to use callback function
+
