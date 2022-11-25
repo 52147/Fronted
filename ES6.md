@@ -31,5 +31,5 @@
         class B {}
         const b = new B();
         b.constructor === B.prototype.constructor; // true
-```html
+```
 https://es6.ruanyifeng.com/#docs/class
