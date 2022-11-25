@@ -160,3 +160,26 @@ Open terminal in vscode
 ```
 PS D:\web_20221123> pip install flask --user
 ```
+
+```python
+from flask import Flask, request, render_template
+
+app = Flask(__name__)  # Flask is the framework to build web server
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'GET':
+        return 'get request success'
+    elif request.method == 'POST':
+        return "post request success"
+
+
+@app.route('/')
+def test():
+    return render_template('ajax_03.html')  # test ajax_03.html
+
+
+if __name__ == "__main__":
+    app.run(debug=True)  # debug = True to let error display on webpage
+```
