@@ -56,3 +56,52 @@ setTimeout(()=>{}, 2000);
 
 start async task => return Promise object => give Promise object a callback function
 
+
+## Promise 01
+
+## `No promise`
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Draw</title>
+</head>
+
+<body>
+
+    <div calss="container">
+        <h1>Promise 01 Lucky Draw</h1>
+        <button id="btn">Click to get prize</button>
+    </div>
+
+    <script>
+        // get the random number
+        function rand(m, n) {
+            return Math.ceil(Math.random() * (n - m + 1)) + m - 1;
+            // Math.ceil() : round up and get the small integer
+        }
+        // get the html element id
+        const btn = document.querySelector("#btn");
+        // add event listerner for clicking
+        btn.addEventListener("click", function () {
+            // set timer, after 1 sec show the res
+            setTimeout(() => {
+                // if get 1~30 bingo(30% percent get the prize), otherwise no bingo
+                let n = rand(1, 100);
+                if (n <= 30) {
+                    alert("No prize");
+                } else {
+                    alert("Won the prize");
+                }
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>
+```
