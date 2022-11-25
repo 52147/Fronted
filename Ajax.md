@@ -37,3 +37,47 @@
 </html>
 ```
 ![image](https://user-images.githubusercontent.com/79159894/203877196-2196c557-6c61-49cf-8e31-a8a80fe5ede2.png)
+
+## Use get to pass parameter
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 02 pass parameter use get request</title>
+</head>
+
+<body>
+
+    <h1>Ajax 02 pass parameter use get request</h1>
+    name: <input type="text" id="name"><br />
+    password: <input type="password" id="pwd"><br />
+    <input type="button" value="reveive data" onclick="submitForm()">
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var pwd = document.getElementById("pwd").value;
+
+            url = "http://httpbin.org/get"
+            url = url + "?name=" + name + "&pwd=" + pwd
+            var xhr = new XMLHttpRequest()
+            xhr.open('get', url)
+            xhr.send()
+            xhr.onload = function () {
+                console.log(xhr.responseText)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+```
+![image](https://user-images.githubusercontent.com/79159894/203878573-27137b80-e950-48e6-b64b-46f2ac5d9782.png)
+![image](https://user-images.githubusercontent.com/79159894/203878633-14de1d97-b908-43c8-b42c-827619653245.png)
+
