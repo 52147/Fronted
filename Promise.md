@@ -20,4 +20,4 @@ https://javascript.ruanyifeng.com/oop/basic.html
 - FS operation
 - Database operation
 - AJAX
-- Timeout
+- setTimeout
