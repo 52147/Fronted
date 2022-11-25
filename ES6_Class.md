@@ -13,7 +13,7 @@
 ```
 ## 2. class function define on prototype 
 
-```html
+```javascript
         class Point {
             constructor() {}
             toString() {}
@@ -27,7 +27,7 @@
         };
 ```
 ## 3. use object to call constuctor is equal to use calss prototype
-```html
+```javascript
         // use object to call constuctor is equal to use calss prototype
         class B {}
         const b = new B();
