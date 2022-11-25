@@ -6,6 +6,7 @@
 
 ## Ajax Basic
 
+```javascript
 <!DOCTYPE html>
 <html>
 
@@ -34,3 +35,5 @@
 </body>
 
 </html>
+```
+![image](https://user-images.githubusercontent.com/79159894/203877196-2196c557-6c61-49cf-8e31-a8a80fe5ede2.png)
