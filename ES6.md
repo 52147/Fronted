@@ -81,4 +81,26 @@
 
         var point = new Point(2, 3); // correct
 ```       
+
+# 8. Class property is define on this.
+```javascript  
+        // Class property is define on this.
+        // other function define on class
+        class Point5 {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            toString() {
+                return this.x + this.y;
+            }
+        }
+        var point = new Point(2, 3);
+        point.toString();
+
+        point.hasOwnProperty('x'); // true
+        point.hasOwnProperty('y'); // true
+        point.hasOwnProperty('toString'); // false
+        point.__proto__.hasOwnProperty('toString') // true // __proto__: property of object
+ ```         
 https://es6.ruanyifeng.com/#docs/class
