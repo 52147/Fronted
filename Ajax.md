@@ -84,3 +84,41 @@ Name and password be added in url.
 ![image](https://user-images.githubusercontent.com/79159894/203878573-27137b80-e950-48e6-b64b-46f2ac5d9782.png)
 ![image](https://user-images.githubusercontent.com/79159894/203878633-14de1d97-b908-43c8-b42c-827619653245.png)
 
+
+## Use post request to pass parameter
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 03 use post request to pass parameter</title>
+</head>
+
+<body>
+    <h1>Ajax 03 use post request to pass parameter</h1>
+    name:<input type="text" id="name"><br />
+    password:<input type="password" id="pwd"><br />
+    <input type="button" value="receive data" onclick="submitForm()">
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var pwd = document.getElementById("pwd").value;
+            url = "http://httpbin.org/get";
+            params = "name = " + name + "&pwd=" + pwd;
+            var xhr = new XMLHttpRequest()
+            xhr.open('post', url)
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(params)
+            xhr.onload = function () {
+                console.log(xhr.responseText)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+```
