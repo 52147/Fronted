@@ -160,7 +160,7 @@ Open terminal in vscode
 ```
 PS D:\web_20221123> pip install flask --user
 ```
-
+- Build a py file for server
 ```python
 from flask import Flask, request, render_template
 
