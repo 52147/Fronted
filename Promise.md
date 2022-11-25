@@ -33,19 +33,19 @@ https://javascript.ruanyifeng.com/oop/basic.html
             })
         });
 ```
-- FS File operation
+- 1. FS File operation
 ```javascript
 require('fs').readFile(',/index.html', (err, data) => {})
 // (err, data) => {} is call back function
 ```
 
-- Database operation
+- 2. Database operation
 ```javascript
 $.get('/server', (data) =>{})
 // (data) =>{} is callback function
 ```
-- AJAX
-- setTimeout
+- 3. AJAX
+- 4. setTimeout
 ```javascript
 setTimeout(()=>{}, 2000);
 // ()=>{} is callback function
