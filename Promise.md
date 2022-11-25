@@ -13,7 +13,7 @@
         v.price // 1000
 
 ```        
-https://javascript.ruanyifeng.com/oop/basic.html \n
+https://javascript.ruanyifeng.com/oop/basic.html        
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 ## asynchronous programming(use callback function)
 - using callback function to fullfill asynchronous programming
