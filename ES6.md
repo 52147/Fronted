@@ -32,4 +32,17 @@
         const b = new B();
         b.constructor === B.prototype.constructor; // true
 ```
+
+## 4. Use object.assign to add many functions in Point2 class
+```javascript
+
+        // Use object.assign to add many functions in Point2 class
+        class Point2 {
+            constructor() {}
+        }
+        Object.assign(Point2.prototype, {
+            toString() {},
+            toValue() {}
+        });
+ ```       
 https://es6.ruanyifeng.com/#docs/class
