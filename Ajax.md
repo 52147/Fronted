@@ -86,6 +86,12 @@ Name and password be added in url.
 
 
 ## 3-1. Use post request to sned String parameter
+
+- parameters are in form data
+![image](https://user-images.githubusercontent.com/79159894/203881855-15a8b537-349e-40b9-aa35-72f823918fb4.png)
+
+## 3-2. Use post to send parameter json
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -136,42 +142,6 @@ Name and password be added in url.
             xhr.send(params)
             xhr.onload = function () {
                 console.log(xhr.responseText)
-            }
-        }
-    </script>
-
-</body>
-
-</html>
-```
-- parameters are in form data
-![image](https://user-images.githubusercontent.com/79159894/203881855-15a8b537-349e-40b9-aa35-72f823918fb4.png)
-
-## 3-2. Use post tosend parameter json
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax 04 State use</title>
-</head>
-
-<body>
-    <h1>Ajax 04 State use</h1>
-    <input type="button" value="send data" onclick="submitForm()">
-
-    <script>
-        function submitForm() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("open", url);
-            xhr.send();
-            // when server is ready what function we want to do
-            xhr.onreadystatechange = function () {
-                console.log(xhr.readyState);
             }
         }
     </script>
