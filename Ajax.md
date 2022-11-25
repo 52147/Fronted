@@ -6,7 +6,7 @@
 
 ## Ajax Basic
 
-```javascript
+```html
 <!DOCTYPE html>
 <html>
 
