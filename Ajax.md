@@ -85,7 +85,7 @@ Name and password be added in url.
 ![image](https://user-images.githubusercontent.com/79159894/203878633-14de1d97-b908-43c8-b42c-827619653245.png)
 
 
-## Use post request to pass parameter
+## Use post request to pass String parameter
 ```html
 <!DOCTYPE html>
 <html lang="en">
