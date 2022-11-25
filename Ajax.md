@@ -4,7 +4,7 @@
 - Ajax allow web change content dynamically without reloading the page.
 
 
-## Ajax Basic
+## 1. Ajax Basic
 
 ```html
 <!DOCTYPE html>
@@ -39,7 +39,7 @@
 Json will appear slower because Ajax is asynchronous.
 ![image](https://user-images.githubusercontent.com/79159894/203877196-2196c557-6c61-49cf-8e31-a8a80fe5ede2.png)
 
-## Use get to pass parameter
+## 2. Use get to sned parameter
 
 ```html
 <!DOCTYPE html>
@@ -85,7 +85,7 @@ Name and password be added in url.
 ![image](https://user-images.githubusercontent.com/79159894/203878633-14de1d97-b908-43c8-b42c-827619653245.png)
 
 
-## Use post request to pass String parameter
+## 3-1. Use post request to sned String parameter
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -147,7 +147,7 @@ Name and password be added in url.
 - parameters are in form data
 ![image](https://user-images.githubusercontent.com/79159894/203881855-15a8b537-349e-40b9-aa35-72f823918fb4.png)
 
-## Use post get parameter json
+## 3-2. Use post tosend parameter json
 
 ```html
 <!DOCTYPE html>
@@ -183,4 +183,4 @@ Name and password be added in url.
 - Request json
 ![image](https://user-images.githubusercontent.com/79159894/203882705-de549d00-4a2a-4589-a1cf-da68b776d783.png)
 
-
+## Ajax Server
