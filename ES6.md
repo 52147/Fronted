@@ -80,27 +80,24 @@
         var point = Point4(2, 3); // return error
 
         var point = new Point(2, 3); // correct
-```       
+```
 
-# 8. Class property is define on this.
-```javascript  
-        // Class property is define on this.
-        // other function define on class
-        class Point5 {
-            constructor(x, y) {
-                this.x = x;
-                this.y = y;
-            }
-            toString() {
-                return this.x + this.y;
-            }
-        }
-        var point = new Point(2, 3);
-        point.toString();
 
-        point.hasOwnProperty('x'); // true
-        point.hasOwnProperty('y'); // true
-        point.hasOwnProperty('toString'); // false
-        point.__proto__.hasOwnProperty('toString') // true // __proto__: property of object
- ```         
+ ## 8. use __proto__ will change the protorype of class
+```javascript 
+        // use __proto__ will change the protorype of class
+        var p1 = new Point(2, 3);
+        var p2 = new Point(3, 3);
+        p1.__proto__.printName = function () {
+            return "Oops"
+        };
+        p1.printName() // return "Oops"
+        p2.printName() // return "Oops"
+
+        var p3 = new Point(4, 2);
+        p3.printName() // return "Oops" 
+        // Summary:
+        // p3 can also use printName() means __proto__ change the prototype
+        // So not recommend to use __proto__
+ ```       
 https://es6.ruanyifeng.com/#docs/class
