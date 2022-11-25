@@ -195,3 +195,58 @@ https://stackoverflow.com/questions/51912999/could-not-install-packages-due-to-a
 
 ## Use Ajax in JQuery
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 5 JQuery</title>
+    <!-- import jquert -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        // ready jquery
+        $(document).ready(function () {
+            // when click the button
+            $("#fetch").click(function (event) {
+                // get the id and title from json
+                $.getJSON("https://jsonplaceholder.typicode.com/posts", function (emp) {
+                    // use for loop to print them in table
+                    for (let i = 0; i < emp.length; i++) {
+                        $("table").append(
+                            "<tr>" + "<td>" + emp[i].id +
+                            "</td>" + "<td>" + emp[i].title + "</td>" + "</tr>")
+                    }
+
+
+                })
+            })
+        })
+    </script>
+
+    <h1>click to fetch the id and title from json</h1>
+    <input type="button" id="fetch" value="Fetch Data">
+
+    <table>
+        <tr>
+            <td>id</td>
+            <td>title</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
+```
+Before click
+![image](https://user-images.githubusercontent.com/79159894/203903357-15cbfd11-646d-4ae7-a9b1-de273369894e.png)
+
+After clicked - Get the all id and title
+![image](https://user-images.githubusercontent.com/79159894/203903318-8c5be452-0d38-40b3-a743-71c14f3707ad.png)
+
