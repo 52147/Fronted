@@ -49,12 +49,12 @@ Json will appear slower because Ajax is asynchronous.
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax 02 pass parameter use get request</title>
+    <title>Ajax 02 send parameter use get request</title>
 </head>
 
 <body>
 
-    <h1>Ajax 02 pass parameter use get request</h1>
+    <h1>Ajax 02 send parameter use get request</h1>
     name: <input type="text" id="name"><br />
     password: <input type="password" id="pwd"><br />
     <input type="button" value="reveive data" onclick="submitForm()">
@@ -94,52 +94,11 @@ Name and password be added in url.
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax 03 use post request to pass parameter</title>
+    <title>Ajax 03 use post request to send parameter</title>
 </head>
 
 <body>
-    <h1>Ajax 03 use post request to pass parameter</h1>
-    name:<input type="text" id="name"><br />
-    password:<input type="password" id="pwd"><br />
-    <input type="button" value="receive data" onclick="submitForm()">
-    <script>
-        function submitForm() {
-            var name = document.getElementById("name").value;
-            var pwd = document.getElementById("pwd").value;
-            url = "http://httpbin.org/get";
-            params = "name = " + name + "&pwd=" + pwd;
-            var xhr = new XMLHttpRequest()
-            xhr.open('post', url)
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.send(params)
-            xhr.onload = function () {
-                console.log(xhr.responseText)
-            }
-        }
-    </script>
-
-</body>
-
-</html>
-```
-- parameters are in form data
-![image](https://user-images.githubusercontent.com/79159894/203881855-15a8b537-349e-40b9-aa35-72f823918fb4.png)
-
-## Use post get parameter json
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajax 03 use post request to pass parameter</title>
-</head>
-
-<body>
-    <h1>Ajax 03 use post request to pass parameter</h1>
+    <h1>Ajax 03 use post request to send parameter</h1>
     name:<input type="text" id="name"><br />
     password:<input type="password" id="pwd"><br />
     <input type="button" value="receive data-str" onclick="submitForm1()">
@@ -177,6 +136,42 @@ Name and password be added in url.
             xhr.send(params)
             xhr.onload = function () {
                 console.log(xhr.responseText)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+```
+- parameters are in form data
+![image](https://user-images.githubusercontent.com/79159894/203881855-15a8b537-349e-40b9-aa35-72f823918fb4.png)
+
+## Use post get parameter json
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 04 State use</title>
+</head>
+
+<body>
+    <h1>Ajax 04 State use</h1>
+    <input type="button" value="send data" onclick="submitForm()">
+
+    <script>
+        function submitForm() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("open", url);
+            xhr.send();
+            // when server is ready what function we want to do
+            xhr.onreadystatechange = function () {
+                console.log(xhr.readyState);
             }
         }
     </script>
