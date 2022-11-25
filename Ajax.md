@@ -125,3 +125,67 @@ Name and password be added in url.
 - parameters are in form data
 ![image](https://user-images.githubusercontent.com/79159894/203881855-15a8b537-349e-40b9-aa35-72f823918fb4.png)
 
+## Use post get parameter json
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 03 use post request to pass parameter</title>
+</head>
+
+<body>
+    <h1>Ajax 03 use post request to pass parameter</h1>
+    name:<input type="text" id="name"><br />
+    password:<input type="password" id="pwd"><br />
+    <input type="button" value="receive data-str" onclick="submitForm1()">
+    <input type="button" value="receive data-json" onclick="submitForm2()">
+
+    <script>
+        function submitForm1() {
+            var name = document.getElementById("name").value;
+            var pwd = document.getElementById("pwd").value;
+            url = "http://httpbin.org/get";
+            params = "name = " + name + "&pwd=" + pwd;
+            var xhr = new XMLHttpRequest()
+            xhr.open('post', url)
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(params)
+            xhr.onload = function () {
+                console.log(xhr.responseText)
+            }
+        }
+
+        function submitForm2() {
+            var name = document.getElementById("name").value;
+            var pwd = document.getElementById("pwd").value;
+            url = "http://httpbin.org/get";
+            // json params
+            params = {
+                "name": name,
+                "pwd": pwd
+            };
+            // convert json to string
+            params = JSON.stringify(params)
+            var xhr = new XMLHttpRequest()
+            xhr.open('post', url)
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(params)
+            xhr.onload = function () {
+                console.log(xhr.responseText)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+```
+- Request json
+![image](https://user-images.githubusercontent.com/79159894/203882705-de549d00-4a2a-4589-a1cf-da68b776d783.png)
+
+
