@@ -155,7 +155,7 @@ Name and password be added in url.
 
 ## 4. Ajax test Server
 
-### 1. install Flask in python
+### install Flask in python
 Open terminal in vscode
 ```
 PS D:\web_20221123> pip install flask --user
