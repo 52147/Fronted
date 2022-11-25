@@ -16,7 +16,8 @@
 https://javascript.ruanyifeng.com/oop/basic.html
 
 
-## asynchronous development in js
+## asynchronous programming
+- using callback function to fullfill asynchronous programming
 - FS File operation
 ```javascript
 require('fs').readFile(',/index.html', (err, data) => {})
