@@ -166,7 +166,8 @@ start async task => return Promise object => give Promise object a callback func
 ```
 Before click    
 
-![image](https://user-images.githubusercontent.com/79159894/204063462-a108e140-8e10-40bf-9847-761641d59ef1.png)
+![image](https://user-images.githubusercontent.com/79159894/204063462-a108e140-8e10-40bf-9847-761641d59ef1.png)         
+
 After click     
 
 ![image](https://user-images.githubusercontent.com/79159894/204063473-8eef8cc6-7f2b-49e3-88ab-a2b90e2c025b.png)
