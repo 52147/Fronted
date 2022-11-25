@@ -27,7 +27,7 @@ https://javascript.ruanyifeng.com/oop/basic.html
             asyncFunc2(opt, () => {
                 asyncFunc3(opt, () => {
                     asyncFunc4(opt, () => {
-                        // somer operation
+                        // some operation
                     })
                 })
             })
