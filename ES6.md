@@ -1,6 +1,6 @@
-# ES6
+# ES6 Class
 
-## 1. Class
+## 1. class is another way to write constructor
 
 ```html
     <script>
@@ -10,7 +10,7 @@
         Point === Point.prototype.constructor // true
     </script>
 ```
-## 2. Class
+## 2. class function define on prototype 
 
 ```html
         class Point {
@@ -25,4 +25,11 @@
             toValue() {},
         };
 ```
+## 3. use object to call constuctor is equal to use calss prototype
+```html
+        // use object to call constuctor is equal to use calss prototype
+        class B {}
+        const b = new B();
+        b.constructor === B.prototype.constructor; // true
+```html
 https://es6.ruanyifeng.com/#docs/class
