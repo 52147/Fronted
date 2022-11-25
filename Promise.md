@@ -52,5 +52,7 @@ setTimeout(()=>{}, 2000);
 ```
 
 
-## Promise can prevent to use callback function
+## Promise can prevent to use many callback function
+
+start async task => return Promise object => give Promise object a callback function
 
