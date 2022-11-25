@@ -14,7 +14,8 @@
 
 ```        
 https://javascript.ruanyifeng.com/oop/basic.html        
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise        
+https://markdown.com.cn/intro.html#markdown-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F
 ## asynchronous programming(use callback function)
 - using callback function to fullfill asynchronous programming
 - Distadvantage: 
