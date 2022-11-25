@@ -44,5 +44,18 @@
             toString() {},
             toValue() {}
         });
- ```       
+ ```
+ ## 5. All functions in class are non-enumerable
+ ```javascript
+         // All functions in class are non-enumerable
+        class Point3 {
+            constructor(x, y) {}
+            toString() {}
+        }
+        // Object.keys() : return a array that contains enumerable properties in Point3
+        Object.keys(Point3.prototype) // return []
+        // Object.getOwnPropertyNames(): return all properties in Points
+        Object.getOwnPropertyNames(Point3.protype) // return ["constructor", "toString"]
+        // In ES5 toString() is enumerable
+ ```         
 https://es6.ruanyifeng.com/#docs/class
