@@ -58,4 +58,16 @@
         Object.getOwnPropertyNames(Point3.protype) // return ["constructor", "toString"]
         // In ES5 toString() is enumerable
  ```         
+ ## 6. default constructor return a object(this) of class
+  ```javascript
+        // default constructor return a object(this) of class
+        // if we change the constructor return object as new object...
+        class Foo {
+            constructor() {
+                return Object.create(null); // use Object.create() creat a new object
+            }
+        }
+        new Foo() instanceof Foo
+        // return false because constructor return a new object
+   ```           
 https://es6.ruanyifeng.com/#docs/class
