@@ -36,6 +36,7 @@
 
 </html>
 ```
+Json will appear slower because Ajax is asynchronous.
 ![image](https://user-images.githubusercontent.com/79159894/203877196-2196c557-6c61-49cf-8e31-a8a80fe5ede2.png)
 
 ## Use get to pass parameter
@@ -78,6 +79,8 @@
 
 </html>
 ```
+
+Name and password be added in url.
 ![image](https://user-images.githubusercontent.com/79159894/203878573-27137b80-e950-48e6-b64b-46f2ac5d9782.png)
 ![image](https://user-images.githubusercontent.com/79159894/203878633-14de1d97-b908-43c8-b42c-827619653245.png)
 
