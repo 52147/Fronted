@@ -122,3 +122,6 @@ Name and password be added in url.
 
 </html>
 ```
+- parameters are in form data
+![image](https://user-images.githubusercontent.com/79159894/203881855-15a8b537-349e-40b9-aa35-72f823918fb4.png)
+
