@@ -110,6 +110,7 @@ export function bigImg(x) {
 `Output`       
  ![image](https://user-images.githubusercontent.com/79159894/205789536-bfbabf2c-f947-48a3-a684-541e6b3ec022.png)    
 > We can see "x" is "MouseEvent"      
+
 1-2. check what is "this" in "bigImg" function
     - add console.log(this) in "bigImg" function to check
 ```javascript
