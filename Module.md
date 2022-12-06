@@ -106,24 +106,24 @@ export function end() {
 }
 ```
 In `index.html`     
-1. import function "end"
+1. import function "bigImg" and "normalImg"
+   - "bigImg" function for handling "onmouseover" event
+   - "normalImg" function for handling "onmouseout" event
 ```javascript
     import {
-        end
-        } from "./main.js"; // ./ => mean from root directory
+        bigImg,
+        normalImg
+        } from "./main.js"; 
 ```
-2. get the audio id "aud"
+2. get the target image id "pi"
 ```html
-    <div>
-      <audio id="aud" controls>
-        <source src="images/summer-surf-120252.mp3" type="audio/ogg">
-        <source src="images/summer-surf-120252.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+      <img id="pi" border="0" src="images/Denver (1).jpg" alt="Smiley" width="32" height="32">
+
  ```
- 3. Add event listener
+ 3. Add event listener "mouseover" and "mouseout" for calling export function "bigImg" and "normalImg"
  ```javascript
-    const element4 = document.getElementById("aud");
-    element4.addEventListener("ended", end);
+    const element2 = document.getElementById("pi");
+
+    element2.addEventListener("mouseover", bigImg);
+    element2.addEventListener("mouseout", normalImg);
  ```   
