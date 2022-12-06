@@ -67,7 +67,7 @@ export class Square {
 2. get the element id
 3. add evnent listener to call the function in main.js
 
-### Example: when audio end, alert "The audio has ended."
+### Example 1: when audio end, alert "The audio has ended."
 In `main.js`   
 0. create a function for handling the "onended" event in main.js
 ```javascript
@@ -97,7 +97,7 @@ In `index.html`
     const element4 = document.getElementById("aud");
     element4.addEventListener("ended", end);
  ```   
-### Example: when mouse on img, img become larger; when mouse out img, img become normal size
+### Example 2: when mouse on img, img become larger; when mouse out img, img become normal size
 In `main.js`   
 0. create 2 export functions for handling the "onmouseover" and onmouseout event in main.js
    - "bigImg" function for handling "onmouseover" event
@@ -109,12 +109,44 @@ export function bigImg(x) {
 }
 
 export function normalImg(x) {
-    console.log(x);
-    console.log(this);
     this.style.height = "32px";
     this.style.width = "32px";
 }
 ```
+We want to change the img height and width to make img bigger, so we want to find where "height" at
+  1. check what is paramter "x" in "bigImg" function
+     - add console.log(x) in "bigImg" function to check
+ ```javascript
+export function bigImg(x) {
+    console.log(x);
+}
+ ```
+ Output     
+ ![image](https://user-images.githubusercontent.com/79159894/205789536-bfbabf2c-f947-48a3-a684-541e6b3ec022.png)
+We can see "x" is "MouseEvent"
+2. check what is "this" in "bigImg" function
+    - add console.log(this) in "bigImg" function to check
+```javascript
+export function bigImg(x) {
+    console.log(this);
+}
+ ```
+Output      
+![image](https://user-images.githubusercontent.com/79159894/205789902-1f7f03f5-8cc3-42fc-bbcf-b2777555459b.png)
+We can see "this" is has the style element, which contains "height"
+3. So we can use this.style.height to change height value
+```javascript
+     this.style.height = "200px";
+```
+4. final function that can change image size
+```javascript
+export function bigImg(x) {
+    this.style.height = "200px";
+    this.style.width = "200px";
+}
+```
+
+
 In `index.html`     
 1. import function "bigImg" and "normalImg"
 
