@@ -60,19 +60,22 @@ export class Square {
 }
 ```
 ## Use export function in html page
+### `main.js`
+0. create function for handle the event
 ### `index.html`
 1. import function
 2. get the element id
 3. add evnent listener to call the function in main.js
 
 ### Example: when audio end, alert "The audio has ended."
-`main.js`
+In `main.js`   
 0. create a function for handling the "onended" event in main.js
 ```javascript
 export function end() {
     alert("The audio has ended.");
 }
 ```
+In `index.html`     
 1. import function "end"
 ```javascript
     import {
