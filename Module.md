@@ -99,16 +99,25 @@ In `index.html`
  ```   
 ### Example: when mouse on img, img become larger; when mouse out img, img become normal size
 In `main.js`   
-0. create a function for handling the "onended" event in main.js
+0. create 2 export functions for handling the "onmouseover" and onmouseout event in main.js
+   - "bigImg" function for handling "onmouseover" event
+   - "normalImg" function for handling "onmouseout" event
 ```javascript
-export function end() {
-    alert("The audio has ended.");
+export function bigImg(x) {
+    this.style.height = "200px";
+    this.style.width = "200px";
+}
+
+export function normalImg(x) {
+    console.log(x);
+    console.log(this);
+    this.style.height = "32px";
+    this.style.width = "32px";
 }
 ```
 In `index.html`     
 1. import function "bigImg" and "normalImg"
-   - "bigImg" function for handling "onmouseover" event
-   - "normalImg" function for handling "onmouseout" event
+
 ```javascript
     import {
         bigImg,
