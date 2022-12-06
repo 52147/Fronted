@@ -59,3 +59,8 @@ export class Square {
     }
 }
 ```
+## Use export function in html page
+### `index.html`
+1. import function
+2. get the element id
+3. add evnent listener to call the function in main.js
