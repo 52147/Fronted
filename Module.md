@@ -93,7 +93,7 @@ In `index.html`
       </audio>
     </div>
  ```
- 3. Add event listener
+3. Add event listener
  ```javascript
     const element4 = document.getElementById("aud");
     element4.addEventListener("ended", end);
@@ -107,7 +107,7 @@ export function bigImg(x) {
     console.log(x);
 }
  ```
- Output     
+`Output`       
  ![image](https://user-images.githubusercontent.com/79159894/205789536-bfbabf2c-f947-48a3-a684-541e6b3ec022.png)    
 We can see "x" is "MouseEvent"      
 1-2. check what is "this" in "bigImg" function
@@ -117,7 +117,7 @@ export function bigImg(x) {
     console.log(this);
 }
  ```
-Output      
+`Output`       
 ![image](https://user-images.githubusercontent.com/79159894/205789902-1f7f03f5-8cc3-42fc-bbcf-b2777555459b.png)          
 We can see "this" is has the style element, which contains "height"     
 1-3. So we can use this.style.height to change height value     
