@@ -32,7 +32,7 @@ Only use one script tag, so put every function in it.
 
 ## Export
 ### `main.js`
-use export keyword at every function
+use export keyword at every function    
 export function     
 ```javascript
 export function bigImg(x) {
