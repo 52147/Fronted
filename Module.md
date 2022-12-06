@@ -1,3 +1,4 @@
+# JS Module
 ## Import
 ### `index.html`
 either choose
@@ -113,7 +114,7 @@ export function normalImg(x) {
     this.style.width = "32px";
 }
 ```
-We want to change the img height and width to make img bigger, so we want to find where "height" at
+We want to change the img height and width to make img bigger, so we want to find where "height" at     
   1. check what is paramter "x" in "bigImg" function
      - add console.log(x) in "bigImg" function to check
  ```javascript
@@ -122,8 +123,8 @@ export function bigImg(x) {
 }
  ```
  Output     
- ![image](https://user-images.githubusercontent.com/79159894/205789536-bfbabf2c-f947-48a3-a684-541e6b3ec022.png)
-We can see "x" is "MouseEvent"
+ ![image](https://user-images.githubusercontent.com/79159894/205789536-bfbabf2c-f947-48a3-a684-541e6b3ec022.png)    
+We can see "x" is "MouseEvent"      
 2. check what is "this" in "bigImg" function
     - add console.log(this) in "bigImg" function to check
 ```javascript
@@ -132,7 +133,7 @@ export function bigImg(x) {
 }
  ```
 Output      
-![image](https://user-images.githubusercontent.com/79159894/205789902-1f7f03f5-8cc3-42fc-bbcf-b2777555459b.png)
+![image](https://user-images.githubusercontent.com/79159894/205789902-1f7f03f5-8cc3-42fc-bbcf-b2777555459b.png)     
 We can see "this" is has the style element, which contains "height"
 3. So we can use this.style.height to change height value
 ```javascript
@@ -159,7 +160,6 @@ In `index.html`
 2. get the target image id "pi"
 ```html
       <img id="pi" border="0" src="images/Denver (1).jpg" alt="Smiley" width="32" height="32">
-
  ```
  3. Add event listener "mouseover" and "mouseout" for calling export function "bigImg" and "normalImg"
  ```javascript
