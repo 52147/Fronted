@@ -64,3 +64,33 @@ export class Square {
 1. import function
 2. get the element id
 3. add evnent listener to call the function in main.js
+
+### Example: when user change volume of audio alert "volume changed"
+`main.js`
+0. create a function for handling the "onended" event in main.js
+```javascript
+export function end() {
+    alert("Then audio has ended.");
+}
+```
+1. import function "end"
+```javascript
+    import {
+        end
+        } from "./main.js"; // ./ => mean from root directory
+```
+3. get the audio id "aud"
+```html
+    <div>
+      <audio id="aud" controls>
+        <source src="images/summer-surf-120252.mp3" type="audio/ogg">
+        <source src="images/summer-surf-120252.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+ ```
+ 4. Add event listener
+ ```javascript
+    const element4 = document.getElementById("aud");
+    element4.addEventListener("ended", end);
+ ```   
