@@ -97,3 +97,33 @@ In `index.html`
     const element4 = document.getElementById("aud");
     element4.addEventListener("ended", end);
  ```   
+### Example: when mouse on img, img become larger; when mouse out img, img become normal size
+In `main.js`   
+0. create a function for handling the "onended" event in main.js
+```javascript
+export function end() {
+    alert("The audio has ended.");
+}
+```
+In `index.html`     
+1. import function "end"
+```javascript
+    import {
+        end
+        } from "./main.js"; // ./ => mean from root directory
+```
+2. get the audio id "aud"
+```html
+    <div>
+      <audio id="aud" controls>
+        <source src="images/summer-surf-120252.mp3" type="audio/ogg">
+        <source src="images/summer-surf-120252.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+ ```
+ 3. Add event listener
+ ```javascript
+    const element4 = document.getElementById("aud");
+    element4.addEventListener("ended", end);
+ ```   
