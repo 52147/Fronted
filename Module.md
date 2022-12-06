@@ -1,11 +1,14 @@
 # JS Module
-> Not use inline event handle if you use module.
-> For example
-> <button onclick = "function1()">click button</button>
+
 1. In js file, create export function.
 2. In html file, import js file as module
 3. Get html target
 4. Add event listener for handling event by using export functions in js file
+> Do Not use inline event handle if you use module.
+For example
+```html
+<button onclick = "function1()">click button</button>
+```
 ## Import
 ### `index.html`
 either choose
