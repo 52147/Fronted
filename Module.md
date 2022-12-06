@@ -118,9 +118,9 @@ export function bigImg(x) {
 }
  ```
 Output      
-![image](https://user-images.githubusercontent.com/79159894/205789902-1f7f03f5-8cc3-42fc-bbcf-b2777555459b.png)     
-We can see "this" is has the style element, which contains "height"
-1-3. So we can use this.style.height to change height value
+![image](https://user-images.githubusercontent.com/79159894/205789902-1f7f03f5-8cc3-42fc-bbcf-b2777555459b.png)          
+We can see "this" is has the style element, which contains "height"     
+1-3. So we can use this.style.height to change height value     
 ```javascript
      this.style.height = "200px";
 ```
