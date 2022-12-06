@@ -82,7 +82,7 @@ In `index.html`
         end
         } from "./main.js"; // ./ => mean from root directory
 ```
-3. get the audio id "aud"
+2. get the audio id "aud"
 ```html
     <div>
       <audio id="aud" controls>
@@ -92,7 +92,7 @@ In `index.html`
       </audio>
     </div>
  ```
- 4. Add event listener
+ 3. Add event listener
  ```javascript
     const element4 = document.getElementById("aud");
     element4.addEventListener("ended", end);
