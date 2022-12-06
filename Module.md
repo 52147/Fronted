@@ -65,12 +65,12 @@ export class Square {
 2. get the element id
 3. add evnent listener to call the function in main.js
 
-### Example: when user change volume of audio alert "volume changed"
+### Example: when audio end, alert "The audio has ended."
 `main.js`
 0. create a function for handling the "onended" event in main.js
 ```javascript
 export function end() {
-    alert("Then audio has ended.");
+    alert("The audio has ended.");
 }
 ```
 1. import function "end"
